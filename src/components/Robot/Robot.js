@@ -1,8 +1,6 @@
-import { RobotStylesCard } from "./RobotStyles";
-
 const Robot = ({ image, name, creationDate, speed, toughness }) => {
   return (
-    <RobotStylesCard>
+    <div className="col">
       <div className="container">
         <div
           className="front"
@@ -26,7 +24,7 @@ const Robot = ({ image, name, creationDate, speed, toughness }) => {
           </div>
         </div>
       </div>
-    </RobotStylesCard>
+    </div>
   );
 };
 

@@ -33,8 +33,7 @@ export const RobotsListStyles = styled.div`
     -ms-flex-pack: center;
     justify-content: center;
   }
-
-  .sc-bczRLJ {
+  .col {
     width: calc(25% - 2rem);
     margin: 1rem;
     cursor: pointer;
@@ -178,19 +177,19 @@ export const RobotsListStyles = styled.div`
   }
 
   @media screen and (max-width: 64rem) {
-    .sc-bczRLJ {
+    .col {
       width: calc(33.333333% - 2rem);
     }
   }
 
   @media screen and (max-width: 48rem) {
-    .sc-bczRLJ {
+    .col {
       width: calc(50% - 2rem);
     }
   }
 
   @media screen and (max-width: 32rem) {
-    .sc-bczRLJ {
+    .col {
       width: 100%;
       margin: 0 0 2rem 0;
     }
