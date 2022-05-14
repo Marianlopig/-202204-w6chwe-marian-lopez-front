@@ -9,7 +9,7 @@ const RobotsList = () => {
       <div className="wrapper">
         <h1>The best Robots</h1>
         {robots.map((robot) => (
-          <Robot key={robot.id} name={robot.name} image={robot.image} />
+          <Robot {...robot} />
         ))}
       </div>
     </RobotsListStyles>
