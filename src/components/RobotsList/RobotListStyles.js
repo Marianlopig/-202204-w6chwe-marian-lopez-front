@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
 export const RobotsListStyles = styled.div`
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 20px 0 80px;
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-weight: normal;
+    color: #444;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 `;
