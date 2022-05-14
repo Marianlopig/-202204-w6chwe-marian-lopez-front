@@ -6,9 +6,10 @@ const RobotsList = () => {
   const robots = useSelector((state) => state.robots);
   return (
     <RobotsListStyles>
-      <div className="container">
+      <div className="wrapper">
+        <h1>The best Robots</h1>
         {robots.map((robot) => (
-          <Robot key={robot.id} name={robot.name} image={robot.image} />
+          <Robot {...robot} />
         ))}
       </div>
     </RobotsListStyles>
