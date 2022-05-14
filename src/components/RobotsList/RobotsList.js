@@ -8,9 +8,16 @@ const RobotsList = () => {
     <RobotsListStyles>
       <div className="wrapper">
         <h1>The best Robots</h1>
-        {robots.map((robot) => (
-          <Robot {...robot} />
-        ))}
+        <div className="cols">
+          {robots.map((robot) => (
+            <>
+              <Robot {...robot} />
+              <Robot {...robot} />
+              <Robot {...robot} />
+              <Robot {...robot} />
+            </>
+          ))}
+        </div>
       </div>
     </RobotsListStyles>
   );

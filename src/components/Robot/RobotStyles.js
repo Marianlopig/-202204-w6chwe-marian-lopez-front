@@ -8,6 +8,21 @@ export const RobotStylesCard = styled.div`
     box-sizing: border-box;
   }
 
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-weight: normal;
+    color: #444;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+
   .cols {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19,7 +34,7 @@ export const RobotStylesCard = styled.div`
     justify-content: center;
   }
 
-  .col {
+  .sc-bczRLJ {
     width: calc(25% - 2rem);
     margin: 1rem;
     cursor: pointer;
@@ -70,7 +85,7 @@ export const RobotStylesCard = styled.div`
     height: 100%;
     content: "";
     display: block;
-    opacity: 0.4;
+    opacity: 0.6;
     background-color: #000;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -163,19 +178,19 @@ export const RobotStylesCard = styled.div`
   }
 
   @media screen and (max-width: 64rem) {
-    .col {
+    .sc-bczRLJ {
       width: calc(33.333333% - 2rem);
     }
   }
 
   @media screen and (max-width: 48rem) {
-    .col {
+    .sc-bczRLJ {
       width: calc(50% - 2rem);
     }
   }
 
   @media screen and (max-width: 32rem) {
-    .col {
+    .sc-bczRLJ {
       width: 100%;
       margin: 0 0 2rem 0;
     }
