@@ -1,30 +1,38 @@
+import Button from "../Button/Button";
+import { RobotStyles } from "./RobotStyles";
+
 const Robot = ({ image, name, creationDate, speed, toughness }) => {
   return (
-    <div className="col">
-      <div className="container">
+    <RobotStyles>
+      <div className="card">
+        <div className="face face1">
+          <div className="content">
+            <div className="buttonContainer">
+              <Button text="Delete" className="button" />
+            </div>
+            <div className="details">
+              <h2>{name}</h2>
+              <p>
+                {name} was born on {new Date(creationDate).toDateString()}. It
+                has a speed of {speed}
+                /10 and a his toughness level is {toughness}/10.
+              </p>
+            </div>
+          </div>
+        </div>
         <div
-          className="front"
+          className="face face2"
           style={{
-            width: "100%",
-            height: "100%",
             backgroundImage: `url('${image}')`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
         >
-          <div className="inner">
-            <p>{name}</p>
-          </div>
-        </div>
-        <div className="back">
-          <div className="inner">
-            <p>
-              {name} was born on {new Date(creationDate).toDateString()}. It has
-              a speed of {speed}
-              /10 and a his toughness level is {toughness}/10.
-            </p>
-          </div>
+          <h2>{name}</h2>
         </div>
       </div>
-    </div>
+    </RobotStyles>
   );
 };
 
