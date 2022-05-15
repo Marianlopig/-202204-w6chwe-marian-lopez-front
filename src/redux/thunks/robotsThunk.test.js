@@ -1,6 +1,9 @@
 import "../../mocks/server";
-import { loadRobotsActionCreator } from "../features/robotsSlice";
-import { loadRobotsThunk } from "./robotsThunk";
+import {
+  loadRobotsActionCreator,
+  deleteRobotActionCreator,
+} from "../features/robotsSlice";
+import { loadRobotsThunk, deleteRobotThunk } from "./robotsThunk";
 
 describe("Given a loadRobotsThunk function", () => {
   describe("When it is called", () => {
@@ -15,6 +18,27 @@ describe("Given a loadRobotsThunk function", () => {
       const expectedAction = loadRobotsActionCreator(expectedData);
 
       const thunk = loadRobotsThunk();
+      await thunk(dispatch);
+
+      expect(dispatch).toHaveBeenCalledWith(expectedAction);
+    });
+  });
+});
+
+describe("Given a deleteRobotThunk function", () => {
+  describe("When it is called", () => {
+    test("It should dispatch deleteRobotActionCreator with the deleted id", async () => {
+      const dispatch = jest.fn();
+      const expectedData = [
+        {
+          _id: "3",
+        },
+      ];
+      const idToDelete = "3";
+
+      const expectedAction = deleteRobotActionCreator(idToDelete);
+
+      const thunk = deleteRobotThunk(idToDelete);
       await thunk(dispatch);
 
       expect(dispatch).toHaveBeenCalledWith(expectedAction);
