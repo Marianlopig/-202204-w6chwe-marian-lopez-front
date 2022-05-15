@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import AddRobot from "../AddRobot/AddRobot";
 import Robot from "../Robot/Robot";
 import { RobotsListStyles } from "./RobotListStyles";
 
@@ -7,6 +8,7 @@ const RobotsList = () => {
   return (
     <RobotsListStyles>
       <div className="container">
+        <AddRobot />
         {robots.map((robot) => (
           <>
             <Robot {...robot} />
