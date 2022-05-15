@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const RobotStyles = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
   display: flex;
   .card {
     position: relative;
