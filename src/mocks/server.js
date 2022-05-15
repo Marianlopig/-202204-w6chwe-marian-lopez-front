@@ -1,7 +1,7 @@
-import { robotsHandler } from "./handlers";
+import { robotsHandlers } from "./handlers";
 import { setupServer } from "msw/node";
 
-const server = setupServer(robotsHandler);
+const server = setupServer(...robotsHandlers);
 
 beforeAll(() => {
   server.listen();
