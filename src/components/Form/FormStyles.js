@@ -5,6 +5,7 @@ export const FormStyles = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
   .container {
     background-color: #92b5b1;
     padding: 20px;
