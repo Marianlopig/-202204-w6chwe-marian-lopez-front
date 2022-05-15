@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FormStyles } from "./FormStyles";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -8,7 +9,7 @@ const Form = () => {
   const [picture, setPicture] = useState("");
 
   const handleChange = (event, setterFunction) => {
-    setterFunction({ value: event.target.value });
+    setterFunction(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -16,55 +17,68 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(event) => handleChange(event, setName)}
-          placeholder="Name"
-        />
-      </label>
-      <label>
-        Date:
-        <input
-          type="date"
-          value={date}
-          onChange={(event) => handleChange(event, setDate)}
-        />
-      </label>
-      <label>
-        Speed:
-        <input
-          type="range"
-          min="0"
-          max="10"
-          value={speed}
-          onChange={(event) => handleChange(event, setSpeed)}
-        />
-      </label>
-      <label>
-        Toughness:
-        <input
-          type="range"
-          min="0"
-          max="10"
-          value={toughness}
-          onChange={(event) => handleChange(event, setToughness)}
-        />
-      </label>
-      <label>
-        Picture:
-        <input
-          type="url"
-          value={picture}
-          onChange={(event) => handleChange(event, setPicture)}
-          placeholder="photo url"
-        />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+    <FormStyles>
+      <div className="container">
+        <h2>Create a new Robot</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(event) => handleChange(event, setName)}
+              placeholder="Name"
+            />
+          </label>
+          <label>
+            Date:
+            <input
+              type="date"
+              value={date}
+              onChange={(event) => handleChange(event, setDate)}
+            />
+          </label>
+          <label>
+            Speed:
+            <div className="slider">
+              <input
+                type="range"
+                min="0"
+                max="10"
+                value={speed}
+                onChange={(event) => handleChange(event, setSpeed)}
+              />
+              <p>{speed}</p>
+            </div>
+          </label>
+          <label>
+            Toughness:
+            <div className="slider">
+              <input
+                type="range"
+                min="0"
+                max="10"
+                value={toughness}
+                onChange={(event) => handleChange(event, setToughness)}
+              />
+              <p>{toughness}</p>
+            </div>
+          </label>
+          <label>
+            Picture:
+            <input
+              type="url"
+              value={picture}
+              onChange={(event) => handleChange(event, setPicture)}
+              placeholder="photo url"
+            />
+          </label>
+          <div className="submitContainer">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </FormStyles>
   );
 };
 
