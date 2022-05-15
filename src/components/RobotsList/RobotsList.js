@@ -5,9 +5,8 @@ import { RobotsListStyles } from "./RobotListStyles";
 const RobotsList = () => {
   const robots = useSelector((state) => state.robots);
   return (
-    <RobotsListStyles className="wrapper">
-      <h1>The best Robots</h1>
-      <div className="cols">
+    <RobotsListStyles>
+      <div className="container">
         {robots.map((robot) => (
           <>
             <Robot {...robot} />
