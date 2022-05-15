@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const RobotsListStyles = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
-  /* margin: 0;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Righteous", cursive;
   min-height: 100vh;
-  background-color: #e5eaea; */
+  background-color: #e5eaea;
 
   .container {
     max-width: 100vw;
