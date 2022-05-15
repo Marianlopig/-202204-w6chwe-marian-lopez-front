@@ -1,14 +1,21 @@
+import { useDispatch } from "react-redux";
+import { deleteRobotThunk } from "../../redux/thunks/robotsThunk";
 import Button from "../Button/Button";
 import { RobotStyles } from "./RobotStyles";
 
-const Robot = ({ image, name, creationDate, speed, toughness }) => {
+const Robot = ({ image, name, creationDate, speed, toughness, _id }) => {
+  const dispatch = useDispatch();
   return (
     <RobotStyles>
       <div className="card">
         <div className="face face1">
           <div className="content">
             <div className="buttonContainer">
-              <Button text="Delete" className="button" />
+              <Button
+                text="Delete"
+                className="button"
+                action={() => dispatch(deleteRobotThunk(_id))}
+              />
             </div>
             <div className="details">
               <h2>{name}</h2>
