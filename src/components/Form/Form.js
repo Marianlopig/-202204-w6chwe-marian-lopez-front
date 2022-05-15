@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { createRobotThunk } from "../../redux/thunks/robotsThunk";
 import { FormStyles } from "./FormStyles";
 
