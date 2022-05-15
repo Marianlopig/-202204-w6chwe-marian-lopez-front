@@ -29,11 +29,6 @@ describe("Given a deleteRobotThunk function", () => {
   describe("When it is called", () => {
     test("It should dispatch deleteRobotActionCreator with the deleted id", async () => {
       const dispatch = jest.fn();
-      const expectedData = [
-        {
-          _id: "3",
-        },
-      ];
       const idToDelete = "3";
 
       const expectedAction = deleteRobotActionCreator(idToDelete);
