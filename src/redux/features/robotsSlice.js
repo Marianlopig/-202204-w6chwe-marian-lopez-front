@@ -8,11 +8,13 @@ const robotsSlice = createSlice({
     deleteRobot: (state, action) => [
       ...state.filter((robot) => robot._id !== action.payload),
     ],
+    createRobot: (state, action) => [...state, action.payload],
   },
 });
 
 export const {
   loadRobots: loadRobotsActionCreator,
   deleteRobot: deleteRobotActionCreator,
+  createRobot: createRobotActionCreator,
 } = robotsSlice.actions;
 export default robotsSlice.reducer;

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router";
+import { createRobotThunk } from "../../redux/thunks/robotsThunk";
 import { FormStyles } from "./FormStyles";
 
 const Form = () => {
@@ -8,12 +11,16 @@ const Form = () => {
   const [toughness, setToughness] = useState(5);
   const [picture, setPicture] = useState("");
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleChange = (event, setterFunction) => {
     setterFunction(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    dispatch(createRobotThunk(name, date, speed, toughness, picture));
+    navigate("/");
   };
 
   return (
