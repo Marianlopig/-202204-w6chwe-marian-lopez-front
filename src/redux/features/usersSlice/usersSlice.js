@@ -7,8 +7,12 @@ const usersSlice = createSlice({
     loginUser: (user, action) => {
       return { ...action.payload };
     },
+    logoutUser: (user) => ({}),
   },
 });
 
-export const { loginUser: loginUserActionCreator } = usersSlice.actions;
+export const {
+  loginUser: loginUserActionCreator,
+  logoutUser: logoutUserActionCreator,
+} = usersSlice.actions;
 export default usersSlice.reducer;
