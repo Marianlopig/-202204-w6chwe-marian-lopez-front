@@ -7,10 +7,8 @@ import Navigation from "./components/Navigation/Navigation";
 import RobotsList from "./components/RobotsList/RobotsList";
 import { loadRobotsThunk } from "./redux/thunks/robotsThunk/robotsThunk";
 import jwt_decode from "jwt-decode";
-import {
-  loginUserActionCreator,
-  logoutUserActionCreator,
-} from "./redux/features/usersSlice/usersSlice";
+import { loginUserActionCreator } from "./redux/features/usersSlice/usersSlice";
+import MainLogin from "./components/MainLogin/MainLogin";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <h1>Hi {user?.name}, here you have a lit of robots</h1>
+      <MainLogin />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<RobotsList />} />
