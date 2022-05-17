@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../../redux/thunks/usersThunk/usersThunk";
+import { LoginStyles } from "./LoginStyles";
 
 const LoginForm = () => {
   const blankData = {
@@ -33,18 +34,33 @@ const LoginForm = () => {
   };
 
   return (
-    <form autoComplete="off" noValidate onSubmit={submitLogin}>
-      <label htmlFor="username" />
-      <input id="username" value={formData.username} onChange={changeData} />
-      <label htmlFor="password" />
-      <input
-        id="password"
-        type="password"
-        value={formData.password}
-        onChange={changeData}
-      />
-      <button disabled={buttonDisabled}>LOG IN</button>
-    </form>
+    <LoginStyles>
+      <div className="container">
+        <h2>Insert your username and password</h2>
+        <form autoComplete="off" noValidate onSubmit={submitLogin}>
+          <label htmlFor="username">
+            <input
+              id="username"
+              value={formData.username}
+              onChange={changeData}
+              placeholder="Name"
+            />
+          </label>
+          <label htmlFor="password">
+            <input
+              id="password"
+              type="password"
+              value={formData.password}
+              onChange={changeData}
+              placeholder="Password"
+            />
+          </label>
+          <div className="submitContainer">
+            <button disabled={buttonDisabled}>LOG IN</button>
+          </div>
+        </form>
+      </div>
+    </LoginStyles>
   );
 };
 export default LoginForm;
