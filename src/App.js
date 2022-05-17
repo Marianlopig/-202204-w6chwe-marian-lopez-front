@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Route, Routes } from "react-router";
 import Form from "./components/Form/Form";
+import LoginForm from "./components/Login/Login";
 import Navigation from "./components/Navigation/Navigation";
 import RobotsList from "./components/RobotsList/RobotsList";
 import { loadRobotsThunk } from "./redux/thunks/robotsThunk/robotsThunk";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<RobotsList />} />
         <Route path="/new" element={<Form />} />
+        <Route path="/login" element={<LoginForm />} />
       </Routes>
     </div>
   );

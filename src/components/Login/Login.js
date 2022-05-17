@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginThunk } from "../../redux/thunks/usersThunk/usersThunk";
 
 const LoginForm = () => {
   const blankData = {
@@ -7,6 +9,7 @@ const LoginForm = () => {
   };
   const [formData, setFormData] = useState(blankData);
   const [buttonDisabled, setButtonDisabled] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (formData.username !== "" && formData.password !== "")
@@ -26,6 +29,7 @@ const LoginForm = () => {
   const submitLogin = (event) => {
     event.preventDefault();
     resetForm();
+    dispatch(loginThunk(formData));
   };
 
   return (
