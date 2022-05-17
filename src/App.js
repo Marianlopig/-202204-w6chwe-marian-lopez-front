@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router";
 import Form from "./components/Form/Form";
@@ -27,11 +27,11 @@ function App() {
     }
   }, [dispatch]);
 
-  const logOut = () => {
-    localStorage.removeItem("token");
-    dispatch(logoutUserActionCreator());
-    return;
-  };
+  // const logOut = () => {
+  //   localStorage.removeItem("token");
+  //   dispatch(logoutUserActionCreator());
+  //   return;
+  // };
 
   return (
     <div className="App">
