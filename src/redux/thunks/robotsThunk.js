@@ -3,7 +3,7 @@ import {
   loadRobotsActionCreator,
   deleteRobotActionCreator,
   createRobotActionCreator,
-} from "../features/robotsSlice";
+} from "../features/robotsSlice/robotsSlice";
 
 const API_URL = "https://two02204-w6chwe-marian-lopez-back.onrender.com";
 const token =
