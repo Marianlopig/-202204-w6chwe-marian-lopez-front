@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from "react-router";
 import Form from "./components/Form/Form";
 import Navigation from "./components/Navigation/Navigation";
 import RobotsList from "./components/RobotsList/RobotsList";
-import { loadRobotsThunk } from "./redux/thunks/robotsThunk";
+import { loadRobotsThunk } from "./redux/thunks/robotsThunk/robotsThunk";
 
 function App() {
   const dispatch = useDispatch();

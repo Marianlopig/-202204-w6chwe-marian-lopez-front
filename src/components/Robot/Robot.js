@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteRobotThunk } from "../../redux/thunks/robotsThunk";
+import { deleteRobotThunk } from "../../redux/thunks/robotsThunk/robotsThunk";
 import Button from "../Button/Button";
 import { RobotStyles } from "./RobotStyles";
 
