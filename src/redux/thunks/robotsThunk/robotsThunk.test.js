@@ -1,4 +1,4 @@
-import "../../mocks/server";
+import "../../../mocks/server";
 import {
   loadRobotsActionCreator,
   deleteRobotActionCreator,

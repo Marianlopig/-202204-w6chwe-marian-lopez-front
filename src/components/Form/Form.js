@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { createRobotThunk } from "../../redux/thunks/robotsThunk";
+import { createRobotThunk } from "../../redux/thunks/robotsThunk/robotsThunk";
 import { FormStyles } from "./FormStyles";
 
 const Form = () => {

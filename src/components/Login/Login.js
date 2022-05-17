@@ -33,7 +33,12 @@ const LoginForm = () => {
       <label htmlFor="username" />
       <input id="username" value={formData.username} onChange={changeData} />
       <label htmlFor="password" />
-      <input id="password" type="password" value={formData.password} />
+      <input
+        id="password"
+        type="password"
+        value={formData.password}
+        onChange={changeData}
+      />
       <button disabled={buttonDisabled}>LOG IN</button>
     </form>
   );
