@@ -18,17 +18,11 @@ function App() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const userInfo = jwt_decode(token);
     if (token) {
+      const userInfo = jwt_decode(token);
       dispatch(loginUserActionCreator(userInfo));
     }
   }, [dispatch]);
-
-  // const logOut = () => {
-  //   localStorage.removeItem("token");
-  //   dispatch(logoutUserActionCreator());
-  //   return;
-  // };
 
   return (
     <div className="App">
